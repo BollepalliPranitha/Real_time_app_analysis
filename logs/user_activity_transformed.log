@@ -1,0 +1,114 @@
+2025-05-09 03:15:38,698 - INFO - Initializing Spark session
+2025-05-09 03:15:42,645 - INFO - Reading fact tables from Snowflake
+2025-05-09 03:15:53,497 - ERROR - Unexpected error in user_activity_transformed.py: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `TimeID` cannot be resolved. Did you mean one of the following? [`PLATFORMID`, `INTERACTIONID`, `TOTALTIMESPENT`, `USERID_SURROGATE`, `MEMBERSHIPSTATUSID`].;
+'Project [UserID_Surrogate#1, PlatformID#3, 'TimeID, cast(CommunityEngagement#5 as float) AS Engagement#16, cast(TotalTimeSpent#6 as float) AS TotalTimeSpent#17, IngestionTimestamp#7]
++- Relation [INTERACTIONID#0,USERID_SURROGATE#1,COMMUNITYID_SURROGATE#2,PLATFORMID#3,MEMBERSHIPSTATUSID#4,COMMUNITYENGAGEMENT#5,TOTALTIMESPENT#6,INGESTIONTIMESTAMP#7] SnowflakeRelation
+
+2025-05-09 03:15:53,532 - INFO - Closing down clientserver connection
+2025-05-09 03:17:41,242 - INFO - Initializing Spark session
+2025-05-09 03:17:44,848 - INFO - Reading fact tables from Snowflake
+2025-05-09 03:17:52,261 - INFO - Unioning fact tables
+2025-05-09 03:17:52,537 - ERROR - Unexpected error in user_activity_transformed.py: An error occurred while calling o112.fill.
+: java.lang.NullPointerException
+	at org.apache.spark.sql.DataFrameNaFunctions.$anonfun$fillMap$1(DataFrameNaFunctions.scala:418)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.DataFrameNaFunctions.fillMap(DataFrameNaFunctions.scala:407)
+	at org.apache.spark.sql.DataFrameNaFunctions.fill(DataFrameNaFunctions.scala:232)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2025-05-09 03:17:52,554 - INFO - Closing down clientserver connection
+2025-05-09 03:19:39,652 - INFO - Initializing Spark session
+2025-05-09 03:19:43,017 - INFO - Reading fact tables from Snowflake
+2025-05-09 03:19:53,125 - INFO - Unioning fact tables
+2025-05-09 03:19:53,515 - ERROR - Unexpected error in user_activity_transformed.py: An error occurred while calling o118.fill.
+: java.lang.NullPointerException
+	at org.apache.spark.sql.DataFrameNaFunctions.$anonfun$fillMap$1(DataFrameNaFunctions.scala:418)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.DataFrameNaFunctions.fillMap(DataFrameNaFunctions.scala:407)
+	at org.apache.spark.sql.DataFrameNaFunctions.fill(DataFrameNaFunctions.scala:232)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2025-05-09 03:19:53,529 - INFO - Closing down clientserver connection
+2025-05-09 03:22:00,173 - INFO - Initializing Spark session
+2025-05-09 03:22:03,632 - INFO - Reading fact tables from Snowflake
+2025-05-09 03:22:12,156 - INFO - Community DataFrame schema:
+2025-05-09 03:22:12,167 - INFO - Live DataFrame schema:
+2025-05-09 03:22:12,170 - INFO - Video DataFrame schema:
+2025-05-09 03:22:12,173 - INFO - Unioning fact tables
+2025-05-09 03:22:18,890 - ERROR - Unexpected error in user_activity_transformed.py: An error occurred while calling o172.fill.
+: java.lang.NullPointerException
+	at org.apache.spark.sql.DataFrameNaFunctions.$anonfun$fillMap$1(DataFrameNaFunctions.scala:418)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.DataFrameNaFunctions.fillMap(DataFrameNaFunctions.scala:407)
+	at org.apache.spark.sql.DataFrameNaFunctions.fill(DataFrameNaFunctions.scala:232)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2025-05-09 03:22:18,903 - INFO - Closing down clientserver connection
+2025-05-09 03:25:08,914 - INFO - Initializing Spark session
+2025-05-09 03:25:11,831 - INFO - Reading fact tables from Snowflake
+2025-05-09 03:25:21,233 - INFO - Community DataFrame schema:
+2025-05-09 03:25:21,244 - INFO - Community DataFrame sample:
+2025-05-09 03:25:25,999 - INFO - Live DataFrame schema:
+2025-05-09 03:25:26,001 - INFO - Live DataFrame sample:
+2025-05-09 03:25:27,116 - INFO - Video DataFrame schema:
+2025-05-09 03:25:27,119 - INFO - Video DataFrame sample:
+2025-05-09 03:25:28,493 - INFO - Unioning fact tables
+2025-05-09 03:25:31,347 - INFO - Unified DataFrame schema:
+2025-05-09 03:25:31,350 - INFO - Unified DataFrame sample:
+2025-05-09 03:25:33,231 - INFO - Aggregating data
+2025-05-09 03:25:37,928 - INFO - Null counts for fact_user_activity: {'InteractionID': 0, 'UserID_Surrogate': 0, 'PlatformID': 0, 'TimeID': 891, 'ActivityDate': 0, 'TotalEngagement': 0, 'TotalTimeSpent': 0, 'SessionCount': 0, 'InteractionCount': 0, 'IngestionTimestamp': 0, 'LoadTimestamp': 0}
+2025-05-09 03:25:41,490 - INFO - Prepared fact_user_activity: 3735 rows
+2025-05-09 03:25:50,195 - INFO - Successfully appended fact_user_activity: 3735 rows
+2025-05-09 03:25:50,993 - INFO - Spark session stopped
+2025-05-09 03:25:50,995 - INFO - Closing down clientserver connection

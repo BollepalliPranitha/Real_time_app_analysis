@@ -1,0 +1,1470 @@
+25/05/09 01:04:38 INFO SparkContext: Running Spark version 3.4.0
+25/05/09 01:04:38 INFO ResourceUtils: ==============================================================
+25/05/09 01:04:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/05/09 01:04:38 INFO ResourceUtils: ==============================================================
+25/05/09 01:04:38 INFO SparkContext: Submitted application: StreamLiveStreamingClean
+25/05/09 01:04:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/05/09 01:04:38 INFO ResourceProfile: Limiting resource is cpu
+25/05/09 01:04:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/05/09 01:04:39 INFO SecurityManager: Changing view acls to: root,spark
+25/05/09 01:04:39 INFO SecurityManager: Changing modify acls to: root,spark
+25/05/09 01:04:39 INFO SecurityManager: Changing view acls groups to: 
+25/05/09 01:04:39 INFO SecurityManager: Changing modify acls groups to: 
+25/05/09 01:04:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+25/05/09 01:04:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/05/09 01:04:40 INFO Utils: Successfully started service 'sparkDriver' on port 43581.
+25/05/09 01:04:41 INFO SparkEnv: Registering MapOutputTracker
+25/05/09 01:04:41 INFO SparkEnv: Registering BlockManagerMaster
+25/05/09 01:04:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/05/09 01:04:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/05/09 01:04:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/05/09 01:04:41 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6bf0c15d-6611-4d24-89fc-38778dbd9144
+25/05/09 01:04:41 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/05/09 01:04:41 INFO SparkEnv: Registering OutputCommitCoordinator
+25/05/09 01:04:42 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/05/09 01:04:43 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+25/05/09 01:04:43 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+25/05/09 01:04:43 INFO Executor: Starting executor ID driver on host 54fce359733d
+25/05/09 01:04:43 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/05/09 01:04:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45655.
+25/05/09 01:04:44 INFO NettyBlockTransferService: Server created on 54fce359733d:45655
+25/05/09 01:04:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/05/09 01:04:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 54fce359733d, 45655, None)
+25/05/09 01:04:44 INFO BlockManagerMasterEndpoint: Registering block manager 54fce359733d:45655 with 434.4 MiB RAM, BlockManagerId(driver, 54fce359733d, 45655, None)
+25/05/09 01:04:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 54fce359733d, 45655, None)
+25/05/09 01:04:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 54fce359733d, 45655, None)
+25/05/09 01:04:47 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/05/09 01:04:47 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+25/05/09 01:05:05 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+25/05/09 01:05:05 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+25/05/09 01:05:05 INFO MetricsSystemImpl: s3a-file-system metrics system started
+25/05/09 01:05:12 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+25/05/09 01:05:12 INFO ResolveWriteToStream: Checkpoint root /app/checkpoints/stream_live_streaming_clean resolved to file:/app/checkpoints/stream_live_streaming_clean.
+25/05/09 01:05:12 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+25/05/09 01:05:13 INFO MicroBatchExecution: Starting [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 6937c85c-de56-4184-84a5-ff0b2fa08ee4]. Use file:/app/checkpoints/stream_live_streaming_clean to store the query checkpoint.
+25/05/09 01:05:13 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@5d2e6905] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@b4e271]
+25/05/09 01:05:15 INFO OffsetSeqLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+25/05/09 01:05:15 INFO OffsetSeqLog: Getting latest batch 17
+25/05/09 01:05:16 INFO OffsetSeqLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+25/05/09 01:05:16 INFO OffsetSeqLog: Getting latest batch 17
+25/05/09 01:05:16 INFO CommitLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+25/05/09 01:05:16 INFO CommitLog: Getting latest batch 17
+25/05/09 01:05:16 INFO MicroBatchExecution: Resuming at batch 18 with committed offsets {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":28}}} and available offsets {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":28}}}
+25/05/09 01:05:16 INFO MicroBatchExecution: Stream started from {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":28}}}
+25/05/09 01:05:16 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+25/05/09 01:05:16 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/05/09 01:05:16 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/05/09 01:05:16 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/05/09 01:05:16 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/05/09 01:05:16 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/05/09 01:05:16 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 01:05:16 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 01:05:16 INFO AppInfoParser: Kafka startTimeMs: 1746752716722
+25/05/09 01:05:18 WARN KafkaOffsetReaderAdmin: Error in attempt 1 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 01:05:19 INFO AppInfoParser: App info kafka.admin.client for adminclient-1 unregistered
+25/05/09 01:05:19 INFO Metrics: Metrics scheduler closed
+25/05/09 01:05:19 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 01:05:19 INFO Metrics: Metrics reporters closed
+25/05/09 01:05:19 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+25/05/09 01:05:19 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/05/09 01:05:19 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/05/09 01:05:19 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/05/09 01:05:19 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/05/09 01:05:19 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/05/09 01:05:19 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 01:05:19 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 01:05:19 INFO AppInfoParser: Kafka startTimeMs: 1746752719560
+25/05/09 01:05:19 WARN KafkaOffsetReaderAdmin: Error in attempt 2 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 01:05:20 INFO AppInfoParser: App info kafka.admin.client for adminclient-2 unregistered
+25/05/09 01:05:20 INFO Metrics: Metrics scheduler closed
+25/05/09 01:05:20 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 01:05:20 INFO Metrics: Metrics reporters closed
+25/05/09 01:05:20 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+25/05/09 01:05:20 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/05/09 01:05:20 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/05/09 01:05:20 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/05/09 01:05:20 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/05/09 01:05:20 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/05/09 01:05:20 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 01:05:20 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 01:05:20 INFO AppInfoParser: Kafka startTimeMs: 1746752720609
+25/05/09 01:05:20 WARN KafkaOffsetReaderAdmin: Error in attempt 3 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 01:05:21 INFO AppInfoParser: App info kafka.admin.client for adminclient-3 unregistered
+25/05/09 01:05:21 INFO Metrics: Metrics scheduler closed
+25/05/09 01:05:21 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 01:05:21 INFO Metrics: Metrics reporters closed
+25/05/09 01:05:23 ERROR MicroBatchExecution: Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 6937c85c-de56-4184-84a5-ff0b2fa08ee4] terminated with error
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 01:05:23 INFO MicroBatchExecution: Async log purge executor pool for query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 6937c85c-de56-4184-84a5-ff0b2fa08ee4] has been shutdown
+25/05/09 01:05:24 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/05/09 01:05:24 INFO SparkUI: Stopped Spark web UI at http://54fce359733d:4041
+25/05/09 01:05:24 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/05/09 01:05:24 INFO MemoryStore: MemoryStore cleared
+25/05/09 01:05:24 INFO BlockManager: BlockManager stopped
+25/05/09 01:05:24 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/05/09 01:05:24 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/05/09 01:05:24 INFO SparkContext: Successfully stopped SparkContext
+25/05/09 01:05:25 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 01:05:25 INFO ShutdownHookManager: Deleting directory /tmp/spark-b7c0ed37-5fa7-4d2c-9431-e8008fdb3c9e
+25/05/09 01:05:25 INFO ShutdownHookManager: Deleting directory /tmp/spark-675461df-70b9-44a6-8968-c619c4ff8b66
+25/05/09 01:05:25 INFO ShutdownHookManager: Deleting directory /tmp/spark-b7c0ed37-5fa7-4d2c-9431-e8008fdb3c9e/pyspark-f5b3596d-144b-40c2-b587-9cf96b885da5
+25/05/09 14:10:44 INFO SparkContext: Running Spark version 3.4.0
+25/05/09 14:10:44 INFO ResourceUtils: ==============================================================
+25/05/09 14:10:44 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/05/09 14:10:44 INFO ResourceUtils: ==============================================================
+25/05/09 14:10:44 INFO SparkContext: Submitted application: StreamLiveStreamingClean
+25/05/09 14:10:45 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/05/09 14:10:45 INFO ResourceProfile: Limiting resource is cpu
+25/05/09 14:10:45 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/05/09 14:10:45 INFO SecurityManager: Changing view acls to: root,spark
+25/05/09 14:10:45 INFO SecurityManager: Changing modify acls to: root,spark
+25/05/09 14:10:45 INFO SecurityManager: Changing view acls groups to: 
+25/05/09 14:10:45 INFO SecurityManager: Changing modify acls groups to: 
+25/05/09 14:10:45 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+25/05/09 14:10:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/05/09 14:10:48 INFO Utils: Successfully started service 'sparkDriver' on port 38271.
+25/05/09 14:10:49 INFO SparkEnv: Registering MapOutputTracker
+25/05/09 14:10:49 INFO SparkEnv: Registering BlockManagerMaster
+25/05/09 14:10:49 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/05/09 14:10:49 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/05/09 14:10:49 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/05/09 14:10:49 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-eb806809-6ff5-4170-b36e-848e4da80504
+25/05/09 14:10:49 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/05/09 14:10:49 INFO SparkEnv: Registering OutputCommitCoordinator
+25/05/09 14:10:50 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/05/09 14:10:51 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/05/09 14:10:51 INFO Executor: Starting executor ID driver on host a4f4c66b7846
+25/05/09 14:10:51 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/05/09 14:10:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41749.
+25/05/09 14:10:52 INFO NettyBlockTransferService: Server created on a4f4c66b7846:41749
+25/05/09 14:10:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/05/09 14:10:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, a4f4c66b7846, 41749, None)
+25/05/09 14:10:52 INFO BlockManagerMasterEndpoint: Registering block manager a4f4c66b7846:41749 with 434.4 MiB RAM, BlockManagerId(driver, a4f4c66b7846, 41749, None)
+25/05/09 14:10:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, a4f4c66b7846, 41749, None)
+25/05/09 14:10:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, a4f4c66b7846, 41749, None)
+25/05/09 14:10:55 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/05/09 14:10:55 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+25/05/09 14:11:16 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+25/05/09 14:11:16 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+25/05/09 14:11:16 INFO MetricsSystemImpl: s3a-file-system metrics system started
+25/05/09 14:11:28 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+25/05/09 14:11:29 INFO ResolveWriteToStream: Checkpoint root /app/checkpoints/stream_live_streaming_clean resolved to file:/app/checkpoints/stream_live_streaming_clean.
+25/05/09 14:11:29 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+25/05/09 14:11:31 INFO MicroBatchExecution: Starting [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 30174106-1653-4323-9e04-a4fc4be22bfc]. Use file:/app/checkpoints/stream_live_streaming_clean to store the query checkpoint.
+25/05/09 14:11:31 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@3dca026a] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@bf20b27]
+25/05/09 14:11:34 INFO OffsetSeqLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+25/05/09 14:11:32 INFO OffsetSeqLog: Getting latest batch 19
+25/05/09 14:11:35 INFO OffsetSeqLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+25/05/09 14:11:35 INFO OffsetSeqLog: Getting latest batch 19
+25/05/09 14:11:37 INFO CommitLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+25/05/09 14:11:37 INFO CommitLog: Getting latest batch 18
+25/05/09 14:11:37 INFO MicroBatchExecution: Resuming at batch 19 with committed offsets {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":15}}} and available offsets {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":18}}}
+25/05/09 14:11:37 INFO MicroBatchExecution: Stream started from {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":15}}}
+25/05/09 14:11:40 INFO IncrementalExecution: Current batch timestamp = 1746798441349
+25/05/09 14:11:43 INFO CodeGenerator: Code generated in 1946.085056 ms
+25/05/09 14:11:43 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+25/05/09 14:11:44 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+25/05/09 14:11:45 INFO IncrementalExecution: Current batch timestamp = 1746798441349
+25/05/09 14:11:45 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+25/05/09 14:11:45 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+25/05/09 14:11:46 INFO FileStreamSinkLog: BatchIds found from listing: 14, 15, 16, 17, 18
+25/05/09 14:11:46 INFO ParquetUtils: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+25/05/09 14:11:50 INFO CodeGenerator: Code generated in 992.414175 ms
+25/05/09 14:11:53 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 202.4 KiB, free 434.2 MiB)
+25/05/09 14:11:54 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 35.3 KiB, free 434.2 MiB)
+25/05/09 14:11:54 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on a4f4c66b7846:41749 (size: 35.3 KiB, free: 434.4 MiB)
+25/05/09 14:11:54 INFO SparkContext: Created broadcast 0 from start at NativeMethodAccessorImpl.java:0
+25/05/09 14:11:54 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+25/05/09 14:11:54 INFO DAGScheduler: Registering RDD 5 (start at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/05/09 14:11:54 INFO DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/05/09 14:11:54 INFO DAGScheduler: Final stage: ResultStage 1 (start at NativeMethodAccessorImpl.java:0)
+25/05/09 14:11:54 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+25/05/09 14:11:55 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+25/05/09 14:11:55 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/09 14:11:55 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 50.7 KiB, free 434.1 MiB)
+25/05/09 14:11:55 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 20.2 KiB, free 434.1 MiB)
+25/05/09 14:11:55 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on a4f4c66b7846:41749 (size: 20.2 KiB, free: 434.3 MiB)
+25/05/09 14:11:55 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1535
+25/05/09 14:11:55 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/05/09 14:11:55 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+25/05/09 14:11:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (a4f4c66b7846, executor driver, partition 0, PROCESS_LOCAL, 8293 bytes) 
+25/05/09 14:11:56 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/05/09 14:11:58 INFO CodeGenerator: Code generated in 216.917832 ms
+25/05/09 14:11:58 INFO CodeGenerator: Code generated in 103.488573 ms
+25/05/09 14:11:58 INFO CodeGenerator: Code generated in 101.734244 ms
+25/05/09 14:11:59 INFO CodeGenerator: Code generated in 114.148323 ms
+25/05/09 14:12:00 INFO CodeGenerator: Code generated in 300.628693 ms
+25/05/09 14:12:01 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+25/05/09 14:12:01 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 14:12:01 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 14:12:01 INFO AppInfoParser: Kafka startTimeMs: 1746799921986
+25/05/09 14:12:02 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Subscribed to partition(s): live_streaming-0
+25/05/09 14:12:02 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Seeking to offset 15 for partition live_streaming-0
+25/05/09 14:12:03 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Resetting the last seen epoch of partition live_streaming-0 to 0 since the associated topicId changed from null to 7-M9ohgTS6yUaOImHsR89A
+25/05/09 14:12:03 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Cluster ID: Uc8O4DPATfmEw-ZbBSbsgQ
+25/05/09 14:12:06 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Discovered group coordinator kafka:9092 (id: 2147482646 rack: null)
+25/05/09 14:12:06 INFO Fetcher: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Fetch position FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1001 rack: null)], epoch=0}} is out of range for partition live_streaming-0, raising error to the application since no reset policy is configured
+25/05/09 14:12:06 WARN KafkaDataConsumer: Cannot fetch offset 15 (GroupId: spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor, TopicPartition: live_streaming-0). 
+Some data may have been lost because they are not available in Kafka any more; either the
+ data was aged out by Kafka or the topic may have been deleted before all the data in the
+ topic was processed. If you want your streaming query to fail on such cases, set the source
+ option "failOnDataLoss" to "true".
+    
+org.apache.kafka.clients.consumer.OffsetOutOfRangeException: Fetch position FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1001 rack: null)], epoch=0}} is out of range for partition live_streaming-0
+	at org.apache.kafka.clients.consumer.internals.Fetcher.handleOffsetOutOfRange(Fetcher.java:1405)
+	at org.apache.kafka.clients.consumer.internals.Fetcher.initializeCompletedFetch(Fetcher.java:1357)
+	at org.apache.kafka.clients.consumer.internals.Fetcher.collectFetch(Fetcher.java:658)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1313)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1242)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1215)
+	at org.apache.spark.sql.kafka010.consumer.InternalKafkaConsumer.fetch(KafkaDataConsumer.scala:78)
+	at org.apache.spark.sql.kafka010.consumer.KafkaDataConsumer.fetchData(KafkaDataConsumer.scala:551)
+	at org.apache.spark.sql.kafka010.consumer.KafkaDataConsumer.fetchRecord(KafkaDataConsumer.scala:475)
+	at org.apache.spark.sql.kafka010.consumer.KafkaDataConsumer.$anonfun$get$1(KafkaDataConsumer.scala:312)
+	at org.apache.spark.util.UninterruptibleThread.runUninterruptibly(UninterruptibleThread.scala:77)
+	at org.apache.spark.sql.kafka010.consumer.KafkaDataConsumer.runUninterruptiblyIfPossible(KafkaDataConsumer.scala:617)
+	at org.apache.spark.sql.kafka010.consumer.KafkaDataConsumer.get(KafkaDataConsumer.scala:288)
+	at org.apache.spark.sql.kafka010.KafkaBatchPartitionReader.next(KafkaBatchPartitionReader.scala:64)
+	at org.apache.spark.sql.execution.datasources.v2.PartitionIterator.hasNext(DataSourceRDD.scala:120)
+	at org.apache.spark.sql.execution.datasources.v2.MetricsIterator.hasNext(DataSourceRDD.scala:158)
+	at org.apache.spark.sql.execution.datasources.v2.DataSourceRDD$$anon$1.$anonfun$hasNext$1(DataSourceRDD.scala:63)
+	at org.apache.spark.sql.execution.datasources.v2.DataSourceRDD$$anon$1.$anonfun$hasNext$1$adapted(DataSourceRDD.scala:63)
+	at scala.Option.exists(Option.scala:376)
+	at org.apache.spark.sql.execution.datasources.v2.DataSourceRDD$$anon$1.hasNext(DataSourceRDD.scala:63)
+	at org.apache.spark.sql.execution.datasources.v2.DataSourceRDD$$anon$1.advanceToNextIter(DataSourceRDD.scala:97)
+	at org.apache.spark.sql.execution.datasources.v2.DataSourceRDD$$anon$1.hasNext(DataSourceRDD.scala:63)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:140)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+25/05/09 14:12:06 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Seeking to EARLIEST offset of partition live_streaming-0
+25/05/09 14:12:06 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Resetting offset for partition live_streaming-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1001 rack: null)], epoch=0}}.
+25/05/09 14:12:06 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Seeking to LATEST offset of partition live_streaming-0
+25/05/09 14:12:06 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Resetting offset for partition live_streaming-0 to position FetchPosition{offset=6, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1001 rack: null)], epoch=0}}.
+25/05/09 14:12:06 WARN KafkaDataConsumer: Some data may be lost. Recovering from the earliest offset: 0
+25/05/09 14:12:06 WARN KafkaDataConsumer: 
+The current available offset range is AvailableOffsetRange(0,6).
+ Offset 15 is out of range, and records in [15, 18) will be
+ skipped (GroupId: spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor, TopicPartition: live_streaming-0). 
+Some data may have been lost because they are not available in Kafka any more; either the
+ data was aged out by Kafka or the topic may have been deleted before all the data in the
+ topic was processed. If you want your streaming query to fail on such cases, set the source
+ option "failOnDataLoss" to "true".
+    
+        
+25/05/09 14:12:06 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2367 bytes result sent to driver
+25/05/09 14:12:06 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 10366 ms on a4f4c66b7846 (executor driver) (1/1)
+25/05/09 14:12:06 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/05/09 14:12:06 INFO DAGScheduler: ShuffleMapStage 0 (start at NativeMethodAccessorImpl.java:0) finished in 11.398 s
+25/05/09 14:12:06 INFO DAGScheduler: looking for newly runnable stages
+25/05/09 14:12:06 INFO DAGScheduler: running: Set()
+25/05/09 14:12:06 INFO DAGScheduler: waiting: Set(ResultStage 1)
+25/05/09 14:12:06 INFO DAGScheduler: failed: Set()
+25/05/09 14:12:06 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/09 14:12:07 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 244.7 KiB, free 433.9 MiB)
+25/05/09 14:12:07 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 90.7 KiB, free 433.8 MiB)
+25/05/09 14:12:07 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on a4f4c66b7846:41749 (size: 90.7 KiB, free: 434.3 MiB)
+25/05/09 14:12:07 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1535
+25/05/09 14:12:07 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/05/09 14:12:07 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+25/05/09 14:12:07 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (a4f4c66b7846, executor driver, partition 0, PROCESS_LOCAL, 7363 bytes) 
+25/05/09 14:12:07 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/05/09 14:12:07 INFO StateStore: State Store maintenance task started
+25/05/09 14:12:08 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@3be44107
+25/05/09 14:12:08 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/app/checkpoints/stream_live_streaming_clean/state,0,0,default),30174106-1653-4323-9e04-a4fc4be22bfc) is active
+25/05/09 14:12:08 WARN HDFSBackedStateStoreProvider: The state for version 19 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+25/05/09 14:12:08 INFO HDFSBackedStateStoreProvider: Read snapshot file for version 12 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/12.snapshot
+25/05/09 14:12:08 INFO HDFSBackedStateStoreProvider: Read delta file for version 13 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/13.delta
+25/05/09 14:12:08 INFO HDFSBackedStateStoreProvider: Read delta file for version 14 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/14.delta
+25/05/09 14:12:08 INFO HDFSBackedStateStoreProvider: Read delta file for version 15 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/15.delta
+25/05/09 14:12:08 INFO HDFSBackedStateStoreProvider: Read delta file for version 16 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/16.delta
+25/05/09 14:12:08 INFO HDFSBackedStateStoreProvider: Read delta file for version 17 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/17.delta
+25/05/09 14:12:09 INFO HDFSBackedStateStoreProvider: Read delta file for version 18 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/18.delta
+25/05/09 14:12:09 INFO HDFSBackedStateStoreProvider: Read delta file for version 19 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] from file:/app/checkpoints/stream_live_streaming_clean/state/0/0/19.delta
+25/05/09 14:12:09 INFO HDFSBackedStateStoreProvider: Retrieved version 19 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_live_streaming_clean/state/0/0] for update
+25/05/09 14:12:09 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/09 14:12:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 84 ms
+25/05/09 14:12:09 INFO CodeGenerator: Code generated in 94.531509 ms
+25/05/09 14:12:09 INFO CodeGenerator: Code generated in 14.312691 ms
+25/05/09 14:12:09 INFO CodeGenerator: Code generated in 192.335026 ms
+25/05/09 14:12:09 INFO CodeGenerator: Code generated in 36.803311 ms
+25/05/09 14:12:10 INFO CheckpointFileManager: Writing atomically to file:/app/checkpoints/stream_live_streaming_clean/state/0/0/20.delta using temp file file:/app/checkpoints/stream_live_streaming_clean/state/0/0/.20.delta.e44fb3ee-0298-4d6e-8f32-479055876a62.TID1.tmp
+25/05/09 14:12:11 INFO CheckpointFileManager: Renamed temp file file:/app/checkpoints/stream_live_streaming_clean/state/0/0/.20.delta.e44fb3ee-0298-4d6e-8f32-479055876a62.TID1.tmp to file:/app/checkpoints/stream_live_streaming_clean/state/0/0/20.delta
+25/05/09 14:12:11 INFO HDFSBackedStateStoreProvider: Committed version 20 for HDFSStateStore[id=(op=0,part=0),dir=file:/app/checkpoints/stream_live_streaming_clean/state/0/0] to file file:/app/checkpoints/stream_live_streaming_clean/state/0/0/20.delta
+25/05/09 14:12:11 INFO CodeGenerator: Code generated in 92.057575 ms
+25/05/09 14:12:11 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 7345 bytes result sent to driver
+25/05/09 14:12:11 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 4410 ms on a4f4c66b7846 (executor driver) (1/1)
+25/05/09 14:12:11 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+25/05/09 14:12:11 INFO DAGScheduler: ResultStage 1 (start at NativeMethodAccessorImpl.java:0) finished in 4.971 s
+25/05/09 14:12:11 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/09 14:12:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+25/05/09 14:12:12 INFO DAGScheduler: Job 0 finished: start at NativeMethodAccessorImpl.java:0, took 20.092771 s
+25/05/09 14:12:12 INFO FileFormatWriter: Start to commit write Job 8eab62c0-4dbf-4399-a614-f430cc98ce92.
+25/05/09 14:12:12 INFO BlockManagerInfo: Removed broadcast_1_piece0 on a4f4c66b7846:41749 in memory (size: 20.2 KiB, free: 434.3 MiB)
+25/05/09 14:12:12 INFO FileStreamSinkLog: Set the compact interval to 10 [defaultCompactInterval: 10]
+25/05/09 14:12:13 INFO deprecation: org.apache.hadoop.shaded.io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+25/05/09 14:12:13 INFO CheckpointFileManager: Writing atomically to s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/19.compact using temp file s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/.19.compact.80190ba3-88be-465d-9ddc-84391bc8a18f.tmp
+25/05/09 14:12:16 ERROR FileFormatWriter: Aborting job 8eab62c0-4dbf-4399-a614-f430cc98ce92.
+org.apache.spark.SparkFileNotFoundException: Unable to find batch s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/9.compact.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.batchMetadataFileNotFoundError(QueryExecutionErrors.scala:2002)
+	at org.apache.spark.sql.execution.streaming.HDFSMetadataLog.applyFnToBatchByStream(HDFSMetadataLog.scala:194)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.applyFnInBatch(CompactibleFileStreamLog.scala:207)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.foreachInBatch(CompactibleFileStreamLog.scala:193)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$3(CompactibleFileStreamLog.scala:235)
+	at scala.runtime.java8.JFunction1$mcVJ$sp.apply(JFunction1$mcVJ$sp.java:23)
+	at scala.collection.immutable.NumericRange.foreach(NumericRange.scala:75)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$2(CompactibleFileStreamLog.scala:234)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$2$adapted(CompactibleFileStreamLog.scala:231)
+	at org.apache.spark.sql.execution.streaming.HDFSMetadataLog.write(HDFSMetadataLog.scala:203)
+	at org.apache.spark.sql.execution.streaming.HDFSMetadataLog.addNewBatchByStream(HDFSMetadataLog.scala:237)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$1(CompactibleFileStreamLog.scala:231)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.compact(CompactibleFileStreamLog.scala:231)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.add(CompactibleFileStreamLog.scala:166)
+	at org.apache.spark.sql.execution.streaming.ManifestFileCommitProtocol.commitJob(ManifestFileCommitProtocol.scala:76)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$writeAndCommit$3(FileFormatWriter.scala:275)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:275)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:212)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:193)
+	at org.apache.spark.sql.execution.streaming.FileStreamSink.addBatch(FileStreamSink.scala:171)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:726)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:726)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:284)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+25/05/09 14:12:16 INFO BlockManagerInfo: Removed broadcast_2_piece0 on a4f4c66b7846:41749 in memory (size: 90.7 KiB, free: 434.4 MiB)
+25/05/09 14:12:16 ERROR MicroBatchExecution: Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 30174106-1653-4323-9e04-a4fc4be22bfc] terminated with error
+org.apache.spark.SparkFileNotFoundException: Unable to find batch s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/9.compact.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.batchMetadataFileNotFoundError(QueryExecutionErrors.scala:2002)
+	at org.apache.spark.sql.execution.streaming.HDFSMetadataLog.applyFnToBatchByStream(HDFSMetadataLog.scala:194)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.applyFnInBatch(CompactibleFileStreamLog.scala:207)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.foreachInBatch(CompactibleFileStreamLog.scala:193)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$3(CompactibleFileStreamLog.scala:235)
+	at scala.runtime.java8.JFunction1$mcVJ$sp.apply(JFunction1$mcVJ$sp.java:23)
+	at scala.collection.immutable.NumericRange.foreach(NumericRange.scala:75)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$2(CompactibleFileStreamLog.scala:234)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$2$adapted(CompactibleFileStreamLog.scala:231)
+	at org.apache.spark.sql.execution.streaming.HDFSMetadataLog.write(HDFSMetadataLog.scala:203)
+	at org.apache.spark.sql.execution.streaming.HDFSMetadataLog.addNewBatchByStream(HDFSMetadataLog.scala:237)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.$anonfun$compact$1(CompactibleFileStreamLog.scala:231)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.compact(CompactibleFileStreamLog.scala:231)
+	at org.apache.spark.sql.execution.streaming.CompactibleFileStreamLog.add(CompactibleFileStreamLog.scala:166)
+	at org.apache.spark.sql.execution.streaming.ManifestFileCommitProtocol.commitJob(ManifestFileCommitProtocol.scala:76)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$writeAndCommit$3(FileFormatWriter.scala:275)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:275)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:212)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:193)
+	at org.apache.spark.sql.execution.streaming.FileStreamSink.addBatch(FileStreamSink.scala:171)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:726)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:726)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:284)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+25/05/09 14:12:16 INFO MicroBatchExecution: Async log purge executor pool for query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 30174106-1653-4323-9e04-a4fc4be22bfc] has been shutdown
+25/05/09 14:12:17 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/05/09 14:12:17 INFO SparkUI: Stopped Spark web UI at http://a4f4c66b7846:4040
+25/05/09 14:12:17 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/05/09 14:12:17 INFO MemoryStore: MemoryStore cleared
+25/05/09 14:12:17 INFO BlockManager: BlockManager stopped
+25/05/09 14:12:17 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/05/09 14:12:17 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/05/09 14:12:17 INFO SparkContext: Successfully stopped SparkContext
+25/05/09 14:12:18 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Resetting generation and member id due to: consumer pro-actively leaving the group
+25/05/09 14:12:18 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1, groupId=spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor] Request joining group due to: consumer pro-actively leaving the group
+25/05/09 14:12:18 INFO Metrics: Metrics scheduler closed
+25/05/09 14:12:18 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 14:12:18 INFO Metrics: Metrics reporters closed
+25/05/09 14:12:18 INFO AppInfoParser: App info kafka.consumer for consumer-spark-kafka-source-adc032c3-00cc-4eec-8d30-ff178287ee2e-597966815-executor-1 unregistered
+25/05/09 14:12:18 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 14:12:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-d829454c-f2e1-4def-8f14-7db44cb7d723
+25/05/09 14:12:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-afc2f051-504c-4a6a-a7ad-4ce4343e7de9/pyspark-cbe305cc-9452-4190-b8dd-ae46b17bc7f5
+25/05/09 14:12:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-afc2f051-504c-4a6a-a7ad-4ce4343e7de9
+25/05/09 15:01:24 INFO SparkContext: Running Spark version 3.4.0
+25/05/09 15:01:24 INFO ResourceUtils: ==============================================================
+25/05/09 15:01:24 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/05/09 15:01:24 INFO ResourceUtils: ==============================================================
+25/05/09 15:01:24 INFO SparkContext: Submitted application: StreamLiveStreamingClean
+25/05/09 15:01:24 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/05/09 15:01:24 INFO ResourceProfile: Limiting resource is cpu
+25/05/09 15:01:24 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/05/09 15:01:24 INFO SecurityManager: Changing view acls to: root,spark
+25/05/09 15:01:24 INFO SecurityManager: Changing modify acls to: root,spark
+25/05/09 15:01:24 INFO SecurityManager: Changing view acls groups to: 
+25/05/09 15:01:24 INFO SecurityManager: Changing modify acls groups to: 
+25/05/09 15:01:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+25/05/09 15:01:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/05/09 15:01:26 INFO Utils: Successfully started service 'sparkDriver' on port 46839.
+25/05/09 15:01:27 INFO SparkEnv: Registering MapOutputTracker
+25/05/09 15:01:27 INFO SparkEnv: Registering BlockManagerMaster
+25/05/09 15:01:27 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/05/09 15:01:27 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/05/09 15:01:27 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/05/09 15:01:27 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-9cde1fa6-f418-46b2-a7b5-38357ffb3d38
+25/05/09 15:01:27 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/05/09 15:01:27 INFO SparkEnv: Registering OutputCommitCoordinator
+25/05/09 15:01:28 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/05/09 15:01:28 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/05/09 15:01:29 INFO Executor: Starting executor ID driver on host 7c7f9b2c4f78
+25/05/09 15:01:29 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/05/09 15:01:29 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39801.
+25/05/09 15:01:29 INFO NettyBlockTransferService: Server created on 7c7f9b2c4f78:39801
+25/05/09 15:01:29 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/05/09 15:01:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 7c7f9b2c4f78, 39801, None)
+25/05/09 15:01:29 INFO BlockManagerMasterEndpoint: Registering block manager 7c7f9b2c4f78:39801 with 434.4 MiB RAM, BlockManagerId(driver, 7c7f9b2c4f78, 39801, None)
+25/05/09 15:01:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 7c7f9b2c4f78, 39801, None)
+25/05/09 15:01:29 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 7c7f9b2c4f78, 39801, None)
+25/05/09 15:01:32 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/05/09 15:01:32 INFO SparkUI: Stopped Spark web UI at http://7c7f9b2c4f78:4040
+25/05/09 15:01:32 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/05/09 15:01:32 INFO MemoryStore: MemoryStore cleared
+25/05/09 15:01:32 INFO BlockManager: BlockManager stopped
+25/05/09 15:01:32 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/05/09 15:01:32 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/05/09 15:01:32 INFO SparkContext: Successfully stopped SparkContext
+25/05/09 15:01:33 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 15:01:33 INFO ShutdownHookManager: Deleting directory /tmp/spark-63243c9d-69a1-4db4-a2e2-af3d2a608617
+25/05/09 15:01:33 INFO ShutdownHookManager: Deleting directory /tmp/spark-3afd2f48-65dc-4629-a6c9-15b4114da3c9
+25/05/09 15:01:33 INFO ShutdownHookManager: Deleting directory /tmp/spark-63243c9d-69a1-4db4-a2e2-af3d2a608617/pyspark-a14aca7c-3630-4a1a-b8cc-55612839951f
+25/05/09 15:56:17 INFO SparkContext: Running Spark version 3.4.0
+25/05/09 15:56:17 INFO ResourceUtils: ==============================================================
+25/05/09 15:56:17 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/05/09 15:56:17 INFO ResourceUtils: ==============================================================
+25/05/09 15:56:17 INFO SparkContext: Submitted application: StreamLiveStreamingClean
+25/05/09 15:56:17 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/05/09 15:56:17 INFO ResourceProfile: Limiting resource is cpu
+25/05/09 15:56:17 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/05/09 15:56:18 INFO SecurityManager: Changing view acls to: root,spark
+25/05/09 15:56:18 INFO SecurityManager: Changing modify acls to: root,spark
+25/05/09 15:56:18 INFO SecurityManager: Changing view acls groups to: 
+25/05/09 15:56:18 INFO SecurityManager: Changing modify acls groups to: 
+25/05/09 15:56:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+25/05/09 15:56:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/05/09 15:56:22 INFO Utils: Successfully started service 'sparkDriver' on port 44125.
+25/05/09 15:56:22 INFO SparkEnv: Registering MapOutputTracker
+25/05/09 15:56:23 INFO SparkEnv: Registering BlockManagerMaster
+25/05/09 15:56:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/05/09 15:56:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/05/09 15:56:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/05/09 15:56:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-8da77185-13c8-4b41-a77e-7421db1c2ec8
+25/05/09 15:56:23 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/05/09 15:56:23 INFO SparkEnv: Registering OutputCommitCoordinator
+25/05/09 15:56:24 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/05/09 15:56:24 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+25/05/09 15:56:24 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+25/05/09 15:56:25 INFO Executor: Starting executor ID driver on host 7f2ad429e8f1
+25/05/09 15:56:25 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/05/09 15:56:25 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37029.
+25/05/09 15:56:25 INFO NettyBlockTransferService: Server created on 7f2ad429e8f1:37029
+25/05/09 15:56:25 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/05/09 15:56:25 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 7f2ad429e8f1, 37029, None)
+25/05/09 15:56:25 INFO BlockManagerMasterEndpoint: Registering block manager 7f2ad429e8f1:37029 with 434.4 MiB RAM, BlockManagerId(driver, 7f2ad429e8f1, 37029, None)
+25/05/09 15:56:25 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 7f2ad429e8f1, 37029, None)
+25/05/09 15:56:25 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 7f2ad429e8f1, 37029, None)
+25/05/09 15:56:30 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/05/09 15:56:30 INFO SharedState: Warehouse path is 'file:/app/spark-warehouse'.
+25/05/09 15:56:52 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+25/05/09 15:56:53 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+25/05/09 15:56:53 INFO MetricsSystemImpl: s3a-file-system metrics system started
+25/05/09 15:57:02 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+25/05/09 15:57:02 INFO ResolveWriteToStream: Checkpoint root /app/checkpoints/stream_live_streaming_clean resolved to file:/app/checkpoints/stream_live_streaming_clean.
+25/05/09 15:57:02 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+25/05/09 15:57:04 INFO MicroBatchExecution: Starting [id = 298f5372-a6ce-407a-986d-155848b07a34, runId = b2c6e604-e1a5-48a2-a989-216c1a3c3738]. Use file:/app/checkpoints/stream_live_streaming_clean to store the query checkpoint.
+25/05/09 15:57:04 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@55d6f3ce] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@770ff9b5]
+25/05/09 15:57:05 INFO OffsetSeqLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+25/05/09 15:57:05 INFO OffsetSeqLog: Getting latest batch 9
+25/05/09 15:57:06 INFO OffsetSeqLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+25/05/09 15:57:06 INFO OffsetSeqLog: Getting latest batch 9
+25/05/09 15:57:06 INFO CommitLog: BatchIds found from listing: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+25/05/09 15:57:06 INFO CommitLog: Getting latest batch 9
+25/05/09 15:57:06 INFO MicroBatchExecution: Resuming at batch 10 with committed offsets {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":18}}} and available offsets {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":18}}}
+25/05/09 15:57:06 INFO MicroBatchExecution: Stream started from {KafkaV2[Subscribe[live_streaming]]: {"live_streaming":{"0":18}}}
+25/05/09 15:57:07 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+25/05/09 15:57:07 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/05/09 15:57:07 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/05/09 15:57:07 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/05/09 15:57:07 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/05/09 15:57:07 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/05/09 15:57:07 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 15:57:07 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 15:57:07 INFO AppInfoParser: Kafka startTimeMs: 1746806227603
+25/05/09 15:57:07 WARN KafkaOffsetReaderAdmin: Error in attempt 1 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 15:57:08 INFO AppInfoParser: App info kafka.admin.client for adminclient-1 unregistered
+25/05/09 15:57:08 INFO Metrics: Metrics scheduler closed
+25/05/09 15:57:08 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 15:57:08 INFO Metrics: Metrics reporters closed
+25/05/09 15:57:08 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+25/05/09 15:57:08 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/05/09 15:57:08 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/05/09 15:57:08 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/05/09 15:57:08 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/05/09 15:57:08 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/05/09 15:57:08 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 15:57:08 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 15:57:08 INFO AppInfoParser: Kafka startTimeMs: 1746806228440
+25/05/09 15:57:08 WARN KafkaOffsetReaderAdmin: Error in attempt 2 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 15:57:09 INFO AppInfoParser: App info kafka.admin.client for adminclient-2 unregistered
+25/05/09 15:57:09 INFO Metrics: Metrics scheduler closed
+25/05/09 15:57:09 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 15:57:09 INFO Metrics: Metrics reporters closed
+25/05/09 15:57:09 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+25/05/09 15:57:09 WARN AdminClientConfig: The configuration 'key.deserializer' was supplied but isn't a known config.
+25/05/09 15:57:09 WARN AdminClientConfig: The configuration 'value.deserializer' was supplied but isn't a known config.
+25/05/09 15:57:09 WARN AdminClientConfig: The configuration 'enable.auto.commit' was supplied but isn't a known config.
+25/05/09 15:57:09 WARN AdminClientConfig: The configuration 'max.poll.records' was supplied but isn't a known config.
+25/05/09 15:57:09 WARN AdminClientConfig: The configuration 'auto.offset.reset' was supplied but isn't a known config.
+25/05/09 15:57:09 INFO AppInfoParser: Kafka version: 3.2.0
+25/05/09 15:57:09 INFO AppInfoParser: Kafka commitId: 38103ffaa962ef50
+25/05/09 15:57:09 INFO AppInfoParser: Kafka startTimeMs: 1746806229581
+25/05/09 15:57:09 WARN KafkaOffsetReaderAdmin: Error in attempt 3 getting Kafka offsets: 
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 15:57:10 INFO AppInfoParser: App info kafka.admin.client for adminclient-3 unregistered
+25/05/09 15:57:10 INFO Metrics: Metrics scheduler closed
+25/05/09 15:57:10 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+25/05/09 15:57:10 INFO Metrics: Metrics reporters closed
+25/05/09 15:57:12 ERROR MicroBatchExecution: Query [id = 298f5372-a6ce-407a-986d-155848b07a34, runId = b2c6e604-e1a5-48a2-a989-216c1a3c3738] terminated with error
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:165)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions(ConsumerStrategy.scala:66)
+	at org.apache.spark.sql.kafka010.ConsumerStrategy.retrieveAllPartitions$(ConsumerStrategy.scala:65)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.retrieveAllPartitions(ConsumerStrategy.scala:102)
+	at org.apache.spark.sql.kafka010.SubscribeStrategy.assignedTopicPartitions(ConsumerStrategy.scala:113)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.$anonfun$partitionsAssignedToAdmin$1(KafkaOffsetReaderAdmin.scala:499)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.withRetries(KafkaOffsetReaderAdmin.scala:518)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.partitionsAssignedToAdmin(KafkaOffsetReaderAdmin.scala:498)
+	at org.apache.spark.sql.kafka010.KafkaOffsetReaderAdmin.fetchLatestOffsets(KafkaOffsetReaderAdmin.scala:297)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchStream.latestOffset(KafkaMicroBatchStream.scala:130)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$4(MicroBatchExecution.scala:489)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$2(MicroBatchExecution.scala:488)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$constructNextBatch$1(MicroBatchExecution.scala:477)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.withProgressLocked(MicroBatchExecution.scala:802)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.constructNextBatch(MicroBatchExecution.scala:473)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:266)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+Caused by: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+25/05/09 15:57:12 INFO MicroBatchExecution: Async log purge executor pool for query [id = 298f5372-a6ce-407a-986d-155848b07a34, runId = b2c6e604-e1a5-48a2-a989-216c1a3c3738] has been shutdown
+25/05/09 15:57:13 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/05/09 15:57:13 INFO SparkUI: Stopped Spark web UI at http://7f2ad429e8f1:4041
+25/05/09 15:57:13 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/05/09 15:57:13 INFO MemoryStore: MemoryStore cleared
+25/05/09 15:57:13 INFO BlockManager: BlockManager stopped
+25/05/09 15:57:13 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/05/09 15:57:13 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/05/09 15:57:13 INFO SparkContext: Successfully stopped SparkContext
+25/05/09 15:57:14 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 15:57:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-b8d0d175-d46d-40bf-bd56-c0249bc79fae
+25/05/09 15:57:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-b8d0d175-d46d-40bf-bd56-c0249bc79fae/pyspark-cc714cc2-ad49-4920-91c4-b6c2f76c8689
+25/05/09 15:57:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-314a5fec-8bcb-4527-84a5-e9382f36f67e

@@ -1,0 +1,94 @@
+Starting stream_live_streaming.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/live_streaming
+Streaming query started: None, ID: e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c
+Error in stream_live_streaming.py: [STREAM_FAILED] Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 6937c85c-de56-4184-84a5-ff0b2fa08ee4] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 162, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 6937c85c-de56-4184-84a5-ff0b2fa08ee4] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 162, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 6937c85c-de56-4184-84a5-ff0b2fa08ee4] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Starting stream_live_streaming.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/live_streaming
+Streaming query started: None, ID: e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c
+Error in stream_live_streaming.py: [STREAM_FAILED] Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 30174106-1653-4323-9e04-a4fc4be22bfc] terminated with exception: Unable to find batch s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/9.compact.
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 162, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 30174106-1653-4323-9e04-a4fc4be22bfc] terminated with exception: Unable to find batch s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/9.compact.
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 162, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = e2b2ed6a-b6bd-4214-85ab-4d3d5ba4141c, runId = 30174106-1653-4323-9e04-a4fc4be22bfc] terminated with exception: Unable to find batch s3a://datastreaming-analytics-1/staging/live_streaming/_spark_metadata/9.compact.
+Starting stream_live_streaming.py
+AWS configurations loaded
+Spark session initialized
+Error in stream_live_streaming.py: name 'DaytonType' is not defined
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 57, in <module>
+    DaytonType(),
+NameError: name 'DaytonType' is not defined
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 57, in <module>
+    DaytonType(),
+NameError: name 'DaytonType' is not defined
+Starting stream_live_streaming.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/live_streaming
+Streaming query started: None, ID: 298f5372-a6ce-407a-986d-155848b07a34
+Error in stream_live_streaming.py: [STREAM_FAILED] Query [id = 298f5372-a6ce-407a-986d-155848b07a34, runId = b2c6e604-e1a5-48a2-a989-216c1a3c3738] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 162, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 298f5372-a6ce-407a-986d-155848b07a34, runId = b2c6e604-e1a5-48a2-a989-216c1a3c3738] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_live_streaming.py", line 162, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 298f5372-a6ce-407a-986d-155848b07a34, runId = b2c6e604-e1a5-48a2-a989-216c1a3c3738] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.

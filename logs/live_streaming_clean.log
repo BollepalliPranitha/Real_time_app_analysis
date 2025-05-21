@@ -1,0 +1,265 @@
+2025-05-06 23:37:31,533 - INFO - Initializing Spark session
+2025-05-06 23:37:36,829 - WARNING - Hadoop check failed for S3 path s3a://datastreaming-analytics/raw/live_streaming: Expected authority at index 6: s3a://
+2025-05-06 23:37:37,231 - INFO - AWS SDK check for s3a://datastreaming-analytics/raw/live_streaming: file count: 2, files: [('raw/live_streaming/_SUCCESS', 0), ('raw/live_streaming/part-00000-d6be1c3c-618b-4a2a-ae3c-874e55566965-c000.snappy.parquet', 28671)]
+2025-05-06 23:37:37,234 - INFO - Reading raw data from s3a://datastreaming-analytics/raw/live_streaming
+2025-05-06 23:37:43,460 - INFO - Raw schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('Watch Time', StringType(), True), StructField('Addiction Level', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:37:45,030 - INFO - Schema applied for live_streaming: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('WatchTime', StringType(), True), StructField('AddictionLevel', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:37:48,976 - INFO - Raw row count: 1000
+2025-05-06 23:37:50,397 - INFO - Null counts for live_streaming_before_null_drop: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:37:52,216 - INFO - Row count after dropping nulls in critical columns: 1000
+2025-05-06 23:38:00,695 - INFO - Row count after validation filters: 1000
+2025-05-06 23:38:03,335 - INFO - Updated row: EventID=1, UserID=957, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,336 - INFO - Updated row: EventID=3, UserID=429, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,336 - INFO - Updated row: EventID=8, UserID=2229, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,337 - INFO - Updated row: EventID=32, UserID=666, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,337 - INFO - Updated row: EventID=58, UserID=2184, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,338 - INFO - Updated row: EventID=83, UserID=2896, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,338 - INFO - Updated row: EventID=84, UserID=3394, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,341 - INFO - Updated row: EventID=88, UserID=865, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,342 - INFO - Updated row: EventID=99, UserID=3297, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:03,342 - INFO - Updated row: EventID=100, UserID=693, Field=DeviceType, OldValue=Computer, NewValue=Unknown, Reason='Standardized DeviceType'
+2025-05-06 23:38:04,649 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=Sports, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,650 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=Concert, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,651 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=Gaming, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,651 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=Gaming, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,651 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,652 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=Gaming, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,652 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=Gaming, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,653 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,653 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:04,653 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:38:06,663 - INFO - Row count after deduplication: 1000
+2025-05-06 23:38:07,317 - INFO - Updated row: EventID=1, UserID=957, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,318 - INFO - Updated row: EventID=3, UserID=429, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,320 - INFO - Updated row: EventID=5, UserID=3740, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,320 - INFO - Updated row: EventID=8, UserID=2229, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,321 - INFO - Updated row: EventID=13, UserID=2348, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,321 - INFO - Updated row: EventID=16, UserID=3759, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,322 - INFO - Updated row: EventID=17, UserID=2562, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,322 - INFO - Updated row: EventID=18, UserID=139, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,323 - INFO - Updated row: EventID=21, UserID=1766, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:07,323 - INFO - Updated row: EventID=22, UserID=80, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:38:10,733 - INFO - Null counts for live_streaming_cleaned: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:38:18,066 - INFO - Successfully wrote 1000 rows to s3a://datastreaming-analytics/staging/live_streaming
+2025-05-06 23:38:18,067 - INFO - Written schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), False), StructField('UserID', LongType(), True), StructField('Platform', StringType(), False), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), False), StructField('StreamDuration', LongType(), False), StructField('DeviceType', StringType(), False), StructField('WatchTime', StringType(), False), StructField('AddictionLevel', LongType(), False), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:38:18,491 - INFO - Closing down clientserver connection
+2025-05-06 23:43:24,321 - INFO - Initializing Spark session
+2025-05-06 23:43:29,105 - WARNING - Hadoop check failed for S3 path s3a://datastreaming-analytics/raw/live_streaming: Expected authority at index 6: s3a://
+2025-05-06 23:43:29,464 - INFO - AWS SDK check for s3a://datastreaming-analytics/raw/live_streaming: file count: 2, files: [('raw/live_streaming/_SUCCESS', 0), ('raw/live_streaming/part-00000-d6be1c3c-618b-4a2a-ae3c-874e55566965-c000.snappy.parquet', 28671)]
+2025-05-06 23:43:29,465 - INFO - Reading raw data from s3a://datastreaming-analytics/raw/live_streaming
+2025-05-06 23:43:37,415 - INFO - Raw schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('Watch Time', StringType(), True), StructField('Addiction Level', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:43:39,006 - INFO - Schema applied for live_streaming: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('WatchTime', StringType(), True), StructField('AddictionLevel', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:43:42,742 - INFO - Raw row count: 1000
+2025-05-06 23:43:42,040 - INFO - Null counts for live_streaming_before_null_drop: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:43:43,766 - INFO - Row count after dropping nulls in critical columns: 1000
+2025-05-06 23:43:51,821 - INFO - Row count after validation filters: 1000
+2025-05-06 23:43:54,684 - INFO - Updated row: EventID=1, UserID=957, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,685 - INFO - Updated row: EventID=3, UserID=429, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,686 - INFO - Updated row: EventID=8, UserID=2229, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,686 - INFO - Updated row: EventID=32, UserID=666, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,687 - INFO - Updated row: EventID=58, UserID=2184, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,687 - INFO - Updated row: EventID=83, UserID=2896, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,687 - INFO - Updated row: EventID=84, UserID=3394, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,688 - INFO - Updated row: EventID=88, UserID=865, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,688 - INFO - Updated row: EventID=99, UserID=3297, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:54,689 - INFO - Updated row: EventID=100, UserID=693, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:43:55,943 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=Sports, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:43:55,944 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=Concert, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:43:55,944 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:43:55,945 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:43:55,945 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:43:55,946 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:43:55,946 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:43:55,947 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:43:55,947 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:43:55,948 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=Q&A, NewValue=Unknown, Reason='Standardized EventType'
+2025-05-06 23:43:58,389 - INFO - Row count after deduplication: 1000
+2025-05-06 23:44:00,212 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,213 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,214 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,214 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,215 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,216 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,216 - INFO - Updated row: EventID=11, UserID=3467, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,217 - INFO - Updated row: EventID=12, UserID=356, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,217 - INFO - Updated row: EventID=13, UserID=2348, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:00,217 - INFO - Updated row: EventID=14, UserID=1319, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:44:01,556 - INFO - Updated row: EventID=1, UserID=957, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,557 - INFO - Updated row: EventID=3, UserID=429, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,558 - INFO - Updated row: EventID=5, UserID=3740, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,559 - INFO - Updated row: EventID=8, UserID=2229, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,560 - INFO - Updated row: EventID=13, UserID=2348, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,560 - INFO - Updated row: EventID=16, UserID=3759, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,561 - INFO - Updated row: EventID=17, UserID=2562, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,561 - INFO - Updated row: EventID=18, UserID=139, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,561 - INFO - Updated row: EventID=21, UserID=1766, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:01,562 - INFO - Updated row: EventID=22, UserID=80, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:44:05,429 - INFO - Null counts for live_streaming_cleaned: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:44:11,437 - INFO - Successfully wrote 1000 rows to s3a://datastreaming-analytics/staging/live_streaming
+2025-05-06 23:44:11,438 - INFO - Written schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), False), StructField('UserID', LongType(), True), StructField('Platform', StringType(), False), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), False), StructField('StreamDuration', LongType(), False), StructField('DeviceType', StringType(), False), StructField('WatchTime', StringType(), False), StructField('AddictionLevel', LongType(), False), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:44:12,354 - INFO - Closing down clientserver connection
+2025-05-06 23:45:50,965 - INFO - Initializing Spark session
+2025-05-06 23:45:56,129 - WARNING - Hadoop check failed for S3 path s3a://datastreaming-analytics/raw/live_streaming: Expected authority at index 6: s3a://
+2025-05-06 23:45:56,508 - INFO - AWS SDK check for s3a://datastreaming-analytics/raw/live_streaming: file count: 2, files: [('raw/live_streaming/_SUCCESS', 0), ('raw/live_streaming/part-00000-d6be1c3c-618b-4a2a-ae3c-874e55566965-c000.snappy.parquet', 28671)]
+2025-05-06 23:45:56,509 - INFO - Reading raw data from s3a://datastreaming-analytics/raw/live_streaming
+2025-05-06 23:46:02,863 - INFO - Raw schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('Watch Time', StringType(), True), StructField('Addiction Level', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:46:04,934 - INFO - Schema applied for live_streaming: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('WatchTime', StringType(), True), StructField('AddictionLevel', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:46:09,056 - INFO - Raw row count: 1000
+2025-05-06 23:46:10,558 - INFO - Null counts for live_streaming_before_null_drop: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:46:12,201 - INFO - Row count after dropping nulls in critical columns: 1000
+2025-05-06 23:46:20,074 - INFO - Row count after validation filters: 1000
+2025-05-06 23:46:22,853 - INFO - Updated row: EventID=1, UserID=957, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,853 - INFO - Updated row: EventID=3, UserID=429, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,854 - INFO - Updated row: EventID=8, UserID=2229, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,855 - INFO - Updated row: EventID=32, UserID=666, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,855 - INFO - Updated row: EventID=58, UserID=2184, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,856 - INFO - Updated row: EventID=83, UserID=2896, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,856 - INFO - Updated row: EventID=84, UserID=3394, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,857 - INFO - Updated row: EventID=88, UserID=865, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,857 - INFO - Updated row: EventID=99, UserID=3297, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:22,857 - INFO - Updated row: EventID=100, UserID=693, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:46:23,909 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=Sports, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,910 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=Concert, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,911 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,911 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,912 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,913 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,913 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,914 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,915 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:23,915 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:46:26,063 - INFO - Row count after deduplication: 1000
+2025-05-06 23:46:27,727 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,728 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,728 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,729 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,729 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,730 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,730 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,730 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,731 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:27,731 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:46:29,059 - INFO - Updated row: EventID=1, UserID=957, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,060 - INFO - Updated row: EventID=3, UserID=429, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,061 - INFO - Updated row: EventID=5, UserID=3740, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,062 - INFO - Updated row: EventID=8, UserID=2229, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,062 - INFO - Updated row: EventID=13, UserID=2348, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,063 - INFO - Updated row: EventID=16, UserID=3759, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,064 - INFO - Updated row: EventID=17, UserID=2562, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,064 - INFO - Updated row: EventID=18, UserID=139, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,065 - INFO - Updated row: EventID=21, UserID=1766, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:29,066 - INFO - Updated row: EventID=22, UserID=80, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:46:30,299 - INFO - Null counts for live_streaming_cleaned: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:46:37,779 - INFO - Successfully wrote 1000 rows to s3a://datastreaming-analytics/staging/live_streaming
+2025-05-06 23:46:37,780 - INFO - Written schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), False), StructField('UserID', LongType(), True), StructField('Platform', StringType(), False), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), False), StructField('StreamDuration', LongType(), False), StructField('DeviceType', StringType(), False), StructField('WatchTime', StringType(), False), StructField('AddictionLevel', LongType(), False), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:46:38,052 - INFO - Closing down clientserver connection
+2025-05-06 23:50:00,245 - INFO - Initializing Spark session
+2025-05-06 23:50:05,136 - WARNING - Hadoop check failed for S3 path s3a://datastreaming-analytics-1/raw/live_streaming: Expected authority at index 6: s3a://
+2025-05-06 23:50:05,489 - INFO - AWS SDK check for s3a://datastreaming-analytics-1/raw/live_streaming: file count: 2, files: [('raw/live_streaming/_SUCCESS', 0), ('raw/live_streaming/part-00000-07e8bfd9-7cd6-4ae0-9157-49c11ed04840-c000.snappy.parquet', 28670)]
+2025-05-06 23:50:05,490 - INFO - Reading raw data from s3a://datastreaming-analytics-1/raw/live_streaming
+2025-05-06 23:50:13,382 - INFO - Raw schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('Watch Time', StringType(), True), StructField('Addiction Level', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:50:12,915 - INFO - Schema applied for live_streaming: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('WatchTime', StringType(), True), StructField('AddictionLevel', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:50:16,827 - INFO - Raw row count: 1000
+2025-05-06 23:50:18,257 - INFO - Null counts for live_streaming_before_null_drop: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:50:19,987 - INFO - Row count after dropping nulls in critical columns: 1000
+2025-05-06 23:50:28,339 - INFO - Row count after validation filters: 1000
+2025-05-06 23:50:31,053 - INFO - Updated row: EventID=1, UserID=957, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,054 - INFO - Updated row: EventID=3, UserID=429, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,054 - INFO - Updated row: EventID=8, UserID=2229, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,055 - INFO - Updated row: EventID=32, UserID=666, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,056 - INFO - Updated row: EventID=58, UserID=2184, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,056 - INFO - Updated row: EventID=83, UserID=2896, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,056 - INFO - Updated row: EventID=84, UserID=3394, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,057 - INFO - Updated row: EventID=88, UserID=865, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,058 - INFO - Updated row: EventID=99, UserID=3297, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:31,059 - INFO - Updated row: EventID=100, UserID=693, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-06 23:50:32,226 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=Sports, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,227 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=Concert, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,227 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,228 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,228 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,229 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,230 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,230 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,231 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:32,231 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-06 23:50:34,162 - INFO - Row count after deduplication: 1000
+2025-05-06 23:50:35,712 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,713 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,714 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,714 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,715 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,715 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,716 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,716 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,716 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:35,717 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-06 23:50:36,943 - INFO - Updated row: EventID=1, UserID=957, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,944 - INFO - Updated row: EventID=3, UserID=429, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,944 - INFO - Updated row: EventID=5, UserID=3740, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,945 - INFO - Updated row: EventID=8, UserID=2229, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,946 - INFO - Updated row: EventID=13, UserID=2348, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,947 - INFO - Updated row: EventID=16, UserID=3759, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,947 - INFO - Updated row: EventID=17, UserID=2562, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,948 - INFO - Updated row: EventID=18, UserID=139, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,949 - INFO - Updated row: EventID=21, UserID=1766, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:36,949 - INFO - Updated row: EventID=22, UserID=80, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-06 23:50:40,276 - INFO - Null counts for live_streaming_cleaned: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-06 23:50:45,636 - INFO - Successfully wrote 1000 rows to s3a://datastreaming-analytics-1/staging/live_streaming
+2025-05-06 23:50:45,638 - INFO - Written schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), False), StructField('UserID', LongType(), True), StructField('Platform', StringType(), False), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), False), StructField('StreamDuration', LongType(), False), StructField('DeviceType', StringType(), False), StructField('WatchTime', StringType(), False), StructField('AddictionLevel', LongType(), False), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-06 23:50:45,879 - INFO - Closing down clientserver connection
+2025-05-08 19:19:44,191 - INFO - Initializing Spark session
+2025-05-08 19:19:48,585 - WARNING - Hadoop check failed for S3 path s3a://datastreaming-analytics-1/raw/live_streaming: Expected authority at index 6: s3a://
+2025-05-08 19:19:48,971 - INFO - AWS SDK check for s3a://datastreaming-analytics-1/raw/live_streaming: file count: 2, files: [('raw/live_streaming/_SUCCESS', 0), ('raw/live_streaming/part-00000-3d9a06ab-e5eb-4f4f-8fb2-cf0ad4a71bd1-c000.snappy.parquet', 28671)]
+2025-05-08 19:19:48,972 - INFO - Reading raw data from s3a://datastreaming-analytics-1/raw/live_streaming
+2025-05-08 19:19:59,738 - INFO - Raw schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('Watch Time', StringType(), True), StructField('Addiction Level', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-08 19:20:01,855 - INFO - Schema applied for live_streaming: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), True), StructField('UserID', LongType(), True), StructField('Platform', StringType(), True), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), True), StructField('StreamDuration', LongType(), True), StructField('DeviceType', StringType(), True), StructField('WatchTime', StringType(), True), StructField('AddictionLevel', LongType(), True), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-08 19:20:06,480 - INFO - Raw row count: 1000
+2025-05-08 19:20:08,278 - INFO - Null counts for live_streaming_before_null_drop: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-08 19:20:10,573 - INFO - Row count after dropping nulls in critical columns: 1000
+2025-05-08 19:20:21,342 - INFO - Row count after validation filters: 1000
+2025-05-08 19:20:26,201 - INFO - Updated row: EventID=1, UserID=957, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,202 - INFO - Updated row: EventID=3, UserID=429, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,203 - INFO - Updated row: EventID=8, UserID=2229, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,203 - INFO - Updated row: EventID=32, UserID=666, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,204 - INFO - Updated row: EventID=58, UserID=2184, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,204 - INFO - Updated row: EventID=83, UserID=2896, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,205 - INFO - Updated row: EventID=84, UserID=3394, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,206 - INFO - Updated row: EventID=88, UserID=865, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,206 - INFO - Updated row: EventID=99, UserID=3297, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:26,207 - INFO - Updated row: EventID=100, UserID=693, Field=DeviceType, OldValue=Computer, NewValue=Desktop, Reason='Standardized DeviceType'
+2025-05-08 19:20:27,933 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=Sports, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,933 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=Concert, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,934 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,935 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,935 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,936 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,936 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=Gaming, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,937 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,938 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:27,938 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=Q&A, NewValue=LiveStream, Reason='Standardized EventType'
+2025-05-08 19:20:30,729 - INFO - Row count after deduplication: 1000
+2025-05-08 19:20:33,504 - INFO - Updated row: EventID=1, UserID=957, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,506 - INFO - Updated row: EventID=2, UserID=3583, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,507 - INFO - Updated row: EventID=3, UserID=429, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,508 - INFO - Updated row: EventID=4, UserID=2101, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,508 - INFO - Updated row: EventID=5, UserID=3740, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,510 - INFO - Updated row: EventID=6, UserID=3272, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,511 - INFO - Updated row: EventID=7, UserID=598, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,512 - INFO - Updated row: EventID=8, UserID=2229, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,513 - INFO - Updated row: EventID=9, UserID=2993, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:33,514 - INFO - Updated row: EventID=10, UserID=1024, Field=EventType, OldValue=LiveStream, NewValue=Livestream, Reason='Trimmed and formatted EventType'
+2025-05-08 19:20:35,424 - INFO - Updated row: EventID=1, UserID=957, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,424 - INFO - Updated row: EventID=3, UserID=429, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,425 - INFO - Updated row: EventID=5, UserID=3740, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,426 - INFO - Updated row: EventID=8, UserID=2229, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,427 - INFO - Updated row: EventID=13, UserID=2348, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,427 - INFO - Updated row: EventID=16, UserID=3759, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,430 - INFO - Updated row: EventID=17, UserID=2562, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,431 - INFO - Updated row: EventID=18, UserID=139, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,432 - INFO - Updated row: EventID=21, UserID=1766, Field=Platform, OldValue=TikTok, NewValue=Tiktok, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:35,432 - INFO - Updated row: EventID=22, UserID=80, Field=Platform, OldValue=YouTube, NewValue=Youtube, Reason='Trimmed and formatted Platform'
+2025-05-08 19:20:40,902 - INFO - Null counts for live_streaming_cleaned: {'EventID': 0, 'EventType': 0, 'UserID': 0, 'Platform': 0, 'LiveEngagement': 0, 'ViewerCount': 0, 'StreamDuration': 0, 'DeviceType': 0, 'WatchTime': 0, 'AddictionLevel': 0, 'IngestionTimestamp': 0}
+2025-05-08 19:20:47,983 - INFO - Successfully wrote 1000 rows to s3a://datastreaming-analytics-1/staging/live_streaming
+2025-05-08 19:20:47,985 - INFO - Written schema: StructType([StructField('EventID', LongType(), True), StructField('EventType', StringType(), False), StructField('UserID', LongType(), True), StructField('Platform', StringType(), False), StructField('LiveEngagement', LongType(), True), StructField('ViewerCount', LongType(), False), StructField('StreamDuration', LongType(), False), StructField('DeviceType', StringType(), False), StructField('WatchTime', StringType(), False), StructField('AddictionLevel', LongType(), False), StructField('IngestionTimestamp', TimestampType(), True)])
+2025-05-08 19:20:48,213 - INFO - Closing down clientserver connection

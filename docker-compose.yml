@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./scripts:/app/scripts
+      - ./checkpoints:/app/checkpoints
+    environment:
+      - PYSPARK_SUBMIT_ARGS=--master local[*] pyspark-shell
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - analytics-net
+    command: /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 6G
+
+  zookeeper:
+    image: bitnami/zookeeper:3.8
+    container_name: zookeeper
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - analytics-net
+  metabase:
+    image: metabase/metabase
+    container_name: metabase
+    ports:
+      - "3001:3000"  # Avoid conflict with Grafana
+    networks:
+      - analytics-net
+    volumes:
+      - metabase-data:/metabase-data
+  kafka:
+    image: bitnami/kafka:3.6.0
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_CFG_NUM_PARTITIONS=1
+      - KAFKA_CFG_DEFAULT_REPLICATION_FACTOR=1
+    healthcheck:
+      test: ["CMD", "kafka-topics.sh", "--bootstrap-server", "localhost:9092", "--list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - analytics-net
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-snowflake-datasource
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - analytics-net
+
+volumes:
+  grafana-data:
+  metabase-data:
+
+networks:
+  analytics-net:
+    driver: bridge

@@ -1,0 +1,8 @@
+25/05/09 01:04:36 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 01:04:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-38bd6fdc-cd8a-44e5-828c-1b855c910b6a
+25/05/09 14:10:41 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 14:10:41 INFO ShutdownHookManager: Deleting directory /tmp/spark-889229dc-0882-43e8-a56a-2634e1574b02
+25/05/09 15:01:21 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 15:01:21 INFO ShutdownHookManager: Deleting directory /tmp/spark-9badf30e-f603-4981-b60e-fc6d88dfdfe9
+25/05/09 15:56:12 INFO ShutdownHookManager: Shutdown hook called
+25/05/09 15:56:12 INFO ShutdownHookManager: Deleting directory /tmp/spark-48489053-2c09-44f9-a013-e8da1c243906

@@ -1,0 +1,15 @@
+2025-05-08 04:04:09,740 - ERROR - Error validating nulls for video_interactions_cleaned: Queries with streaming sources must be executed with writeStream.start();
+kafka
+2025-05-08 04:05:40,853 - INFO - Closing down clientserver connection
+2025-05-08 04:10:05,390 - INFO - Callback Server Starting
+2025-05-08 04:10:05,391 - INFO - Socket listening on ('127.0.0.1', 38533)
+2025-05-08 04:10:07,959 - INFO - Closing down clientserver connection
+2025-05-08 04:10:51,364 - INFO - Callback Server Starting
+2025-05-08 04:10:51,365 - INFO - Socket listening on ('127.0.0.1', 43137)
+2025-05-08 04:10:54,101 - INFO - Closing down clientserver connection
+2025-05-08 04:13:31,001 - INFO - Callback Server Starting
+2025-05-08 04:13:31,002 - INFO - Socket listening on ('127.0.0.1', 34861)
+2025-05-08 04:14:10,057 - INFO - Closing down clientserver connection
+2025-05-08 04:17:02,463 - INFO - Callback Server Starting
+2025-05-08 04:17:02,476 - INFO - Socket listening on ('127.0.0.1', 42907)
+2025-05-08 04:17:19,847 - INFO - Closing down clientserver connection

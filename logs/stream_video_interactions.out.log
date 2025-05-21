@@ -1,0 +1,234 @@
+Starting stream_video_interactions.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/video_interactions
+Streaming query started: None, ID: 9d9eda95-8298-4e3d-8575-e069bb453ddf
+Error in stream_video_interactions.py: [STREAM_FAILED] Query [id = 9d9eda95-8298-4e3d-8575-e069bb453ddf, runId = 5e7b8c07-3921-407e-87f6-19431405142c] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 9d9eda95-8298-4e3d-8575-e069bb453ddf, runId = 5e7b8c07-3921-407e-87f6-19431405142c] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 9d9eda95-8298-4e3d-8575-e069bb453ddf, runId = 5e7b8c07-3921-407e-87f6-19431405142c] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Starting stream_video_interactions.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/video_interactions
+Streaming query started: None, ID: 9d9eda95-8298-4e3d-8575-e069bb453ddf
+Error in stream_video_interactions.py: [STREAM_FAILED] Query [id = 9d9eda95-8298-4e3d-8575-e069bb453ddf, runId = 54525bb6-9a21-4b96-8271-ab438146b9e7] terminated with exception: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (a4f4c66b7846 executor driver): java.lang.IllegalStateException: Error reading delta file file:/app/checkpoints/stream_video_clean/state/0/0/1.delta of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_video_clean/state/0/0]: file:/app/checkpoints/stream_video_clean/state/0/0/1.delta does not exist
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.updateFromDeltaFile(HDFSBackedStateStoreProvider.scala:461)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.$anonfun$loadMap$4(HDFSBackedStateStoreProvider.scala:417)
+	at scala.runtime.java8.JFunction1$mcVJ$sp.apply(JFunction1$mcVJ$sp.java:23)
+	at scala.collection.immutable.NumericRange.foreach(NumericRange.scala:75)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.$anonfun$loadMap$2(HDFSBackedStateStoreProvider.scala:416)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.loadMap(HDFSBackedStateStoreProvider.scala:388)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.getLoadedMapForStore(HDFSBackedStateStoreProvider.scala:224)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.getStore(HDFSBackedStateStoreProvider.scala:208)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.get(StateStore.scala:500)
+	at org.apache.spark.sql.execution.streaming.state.StateStoreRDD.compute(StateStoreRDD.scala:125)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.FileNotFoundException: File file:/app/checkpoints/stream_video_clean/state/0/0/1.delta does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:779)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:1100)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:769)
+	at org.apache.hadoop.fs.RawLocalFileSystem.open(RawLocalFileSystem.java:274)
+	at org.apache.hadoop.fs.DelegateToFileSystem.open(DelegateToFileSystem.java:192)
+	at org.apache.hadoop.fs.AbstractFileSystem.open(AbstractFileSystem.java:670)
+	at org.apache.hadoop.fs.FilterFs.open(FilterFs.java:227)
+	at org.apache.hadoop.fs.FileContext$6.next(FileContext.java:874)
+	at org.apache.hadoop.fs.FileContext$6.next(FileContext.java:870)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.open(FileContext.java:876)
+	at org.apache.spark.sql.execution.streaming.AbstractFileContextBasedCheckpointFileManager.open(CheckpointFileManager.scala:328)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.updateFromDeltaFile(HDFSBackedStateStoreProvider.scala:457)
+	... 24 more
+
+Driver stacktrace:
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 9d9eda95-8298-4e3d-8575-e069bb453ddf, runId = 54525bb6-9a21-4b96-8271-ab438146b9e7] terminated with exception: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (a4f4c66b7846 executor driver): java.lang.IllegalStateException: Error reading delta file file:/app/checkpoints/stream_video_clean/state/0/0/1.delta of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_video_clean/state/0/0]: file:/app/checkpoints/stream_video_clean/state/0/0/1.delta does not exist
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.updateFromDeltaFile(HDFSBackedStateStoreProvider.scala:461)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.$anonfun$loadMap$4(HDFSBackedStateStoreProvider.scala:417)
+	at scala.runtime.java8.JFunction1$mcVJ$sp.apply(JFunction1$mcVJ$sp.java:23)
+	at scala.collection.immutable.NumericRange.foreach(NumericRange.scala:75)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.$anonfun$loadMap$2(HDFSBackedStateStoreProvider.scala:416)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.loadMap(HDFSBackedStateStoreProvider.scala:388)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.getLoadedMapForStore(HDFSBackedStateStoreProvider.scala:224)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.getStore(HDFSBackedStateStoreProvider.scala:208)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.get(StateStore.scala:500)
+	at org.apache.spark.sql.execution.streaming.state.StateStoreRDD.compute(StateStoreRDD.scala:125)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.FileNotFoundException: File file:/app/checkpoints/stream_video_clean/state/0/0/1.delta does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:779)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:1100)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:769)
+	at org.apache.hadoop.fs.RawLocalFileSystem.open(RawLocalFileSystem.java:274)
+	at org.apache.hadoop.fs.DelegateToFileSystem.open(DelegateToFileSystem.java:192)
+	at org.apache.hadoop.fs.AbstractFileSystem.open(AbstractFileSystem.java:670)
+	at org.apache.hadoop.fs.FilterFs.open(FilterFs.java:227)
+	at org.apache.hadoop.fs.FileContext$6.next(FileContext.java:874)
+	at org.apache.hadoop.fs.FileContext$6.next(FileContext.java:870)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.open(FileContext.java:876)
+	at org.apache.spark.sql.execution.streaming.AbstractFileContextBasedCheckpointFileManager.open(CheckpointFileManager.scala:328)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.updateFromDeltaFile(HDFSBackedStateStoreProvider.scala:457)
+	... 24 more
+
+Driver stacktrace:
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 9d9eda95-8298-4e3d-8575-e069bb453ddf, runId = 54525bb6-9a21-4b96-8271-ab438146b9e7] terminated with exception: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (a4f4c66b7846 executor driver): java.lang.IllegalStateException: Error reading delta file file:/app/checkpoints/stream_video_clean/state/0/0/1.delta of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/app/checkpoints/stream_video_clean/state/0/0]: file:/app/checkpoints/stream_video_clean/state/0/0/1.delta does not exist
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.updateFromDeltaFile(HDFSBackedStateStoreProvider.scala:461)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.$anonfun$loadMap$4(HDFSBackedStateStoreProvider.scala:417)
+	at scala.runtime.java8.JFunction1$mcVJ$sp.apply(JFunction1$mcVJ$sp.java:23)
+	at scala.collection.immutable.NumericRange.foreach(NumericRange.scala:75)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.$anonfun$loadMap$2(HDFSBackedStateStoreProvider.scala:416)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:640)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.loadMap(HDFSBackedStateStoreProvider.scala:388)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.getLoadedMapForStore(HDFSBackedStateStoreProvider.scala:224)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.getStore(HDFSBackedStateStoreProvider.scala:208)
+	at org.apache.spark.sql.execution.streaming.state.StateStore$.get(StateStore.scala:500)
+	at org.apache.spark.sql.execution.streaming.state.StateStoreRDD.compute(StateStoreRDD.scala:125)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.FileNotFoundException: File file:/app/checkpoints/stream_video_clean/state/0/0/1.delta does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:779)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:1100)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:769)
+	at org.apache.hadoop.fs.RawLocalFileSystem.open(RawLocalFileSystem.java:274)
+	at org.apache.hadoop.fs.DelegateToFileSystem.open(DelegateToFileSystem.java:192)
+	at org.apache.hadoop.fs.AbstractFileSystem.open(AbstractFileSystem.java:670)
+	at org.apache.hadoop.fs.FilterFs.open(FilterFs.java:227)
+	at org.apache.hadoop.fs.FileContext$6.next(FileContext.java:874)
+	at org.apache.hadoop.fs.FileContext$6.next(FileContext.java:870)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.open(FileContext.java:876)
+	at org.apache.spark.sql.execution.streaming.AbstractFileContextBasedCheckpointFileManager.open(CheckpointFileManager.scala:328)
+	at org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider.updateFromDeltaFile(HDFSBackedStateStoreProvider.scala:457)
+	... 24 more
+
+Driver stacktrace:
+Starting stream_video_interactions.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/video_interactions
+Streaming query started: None, ID: 73f9b9e4-7dd6-4c98-9520-029ceb4304d9
+Error in stream_video_interactions.py: [STREAM_FAILED] Query [id = 73f9b9e4-7dd6-4c98-9520-029ceb4304d9, runId = 28f95530-1fbc-43c8-9ac9-ab5e43da0dc3] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 73f9b9e4-7dd6-4c98-9520-029ceb4304d9, runId = 28f95530-1fbc-43c8-9ac9-ab5e43da0dc3] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 73f9b9e4-7dd6-4c98-9520-029ceb4304d9, runId = 28f95530-1fbc-43c8-9ac9-ab5e43da0dc3] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Starting stream_video_interactions.py
+AWS configurations loaded
+Spark session initialized
+Schema defined
+Kafka stream initialized
+JSON parsing completed
+Writing cleaned data to s3a://datastreaming-analytics-1/staging/video_interactions
+Streaming query started: None, ID: 73f9b9e4-7dd6-4c98-9520-029ceb4304d9
+Error in stream_video_interactions.py: [STREAM_FAILED] Query [id = 73f9b9e4-7dd6-4c98-9520-029ceb4304d9, runId = 794a3284-780b-4eac-a638-c59200e36b36] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 73f9b9e4-7dd6-4c98-9520-029ceb4304d9, runId = 794a3284-780b-4eac-a638-c59200e36b36] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
+Spark session stopped
+Traceback (most recent call last):
+  File "/app/scripts/stream_video_interactions.py", line 274, in <module>
+    query.awaitTermination()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 175, in deco
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 73f9b9e4-7dd6-4c98-9520-029ceb4304d9, runId = 794a3284-780b-4eac-a638-c59200e36b36] terminated with exception: org.apache.kafka.common.errors.UnknownTopicOrPartitionException: This server does not host this topic-partition.
